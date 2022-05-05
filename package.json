@@ -8,6 +8,7 @@
     "default": {
       "optimize": false,
       "sourceMap": false,
+      "scopeHoist": false,
       "publicUrl": "/check-parcel-storage-cors"
     }
   },
