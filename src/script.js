@@ -11,7 +11,14 @@ document.querySelector('#form').addEventListener('submit', (event) => {
     const parcel = new Parcel(token);
     console.log(parcel);
     console.log(await parcel.getCurrentIdentity());
-    const doc = await parcel.uploadDocument('this is data', null).finished;
+    const doc = await parcel.uploadDocument('this is data', {
+      details: {
+        title: 'aa',
+        tags: ['aa', 'bb'],
+      },
+      /** @type {any} */
+      toApp: 'AWxTNpZeYQ98QTBcQeXjNDy',
+    }).finished;
     console.log(doc);
     await doc.delete();
   })();
